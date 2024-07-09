@@ -2,7 +2,10 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const api = createApi({
   reducerPath: "api",
-  baseQuery: fetchBaseQuery({ baseUrl: `` }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: `https://nox-weather-backend.onrender.com`,
+    // baseUrl: `https://localhost:3333`, // use this during devlopment
+  }),
   tagTypes: ["Weather", "Weekly", "User"],
 
   endpoints: (builder) => ({
@@ -22,7 +25,7 @@ const api = createApi({
 
     userProfile: builder.query({
       query: () => ({
-        url: "http://localhost:3333/api/v1/user/profile",
+        url: "/api/v1/user/profile",
         credentials: "include",
       }),
       providesTags: ["User"],
@@ -30,15 +33,19 @@ const api = createApi({
 
     addRemoveCities: builder.query({
       query: (city) => ({
-        url: `http://localhost:3333/api/v1/user/updatecities/${city}`,
+        url: `/api/v1/user/updatecities/${city}`,
         credentials: "include",
       }),
       invalidatesTags: ["User"],
     }),
-
   }),
 });
 
 export default api;
 
-export const { useCurWeatherQuery, useWeeklyForecastQuery, useUserProfileQuery, useLazyAddRemoveCitiesQuery } = api;
+export const {
+  useCurWeatherQuery,
+  useWeeklyForecastQuery,
+  useUserProfileQuery,
+  useLazyAddRemoveCitiesQuery,
+} = api;
