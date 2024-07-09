@@ -1,0 +1,83 @@
+.weeklyForecastBox {
+  width: 100%;
+  height: 15rem;
+  border-radius: 25px;
+  padding: none;
+  backdrop-filter: blur(16px);
+  background-color: rgba(34, 29, 29, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  /* filter: drop-shadow(0 0 20px rgba(252, 252, 252, 0.8)); */
+}
+
+.weeklyForecastHeader {
+  width: 100%;
+  height: 2.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.weeklyForecastHeader span {
+  height: 0.2rem;
+  width: 2rem;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+.weeklyForecastStack {
+  width: 100%;
+  height: calc(100% - 2.6rem);
+  backdrop-filter: blur(6px);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.weeklyForecastStack div {
+  height: 90%;
+  width: 4rem;
+  backdrop-filter: blur(60px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(252, 252, 252, 0.6);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+
+@media  all and (max-width: 900px) {
+
+  .weeklyForecastStack {
+  width: 100%;
+  height: calc(100% - 2.6rem);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow: auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.weeklyForecastStack div {
+  min-height: 4rem;
+ width: 100%;
+  backdrop-filter: blur(60px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 2px rgba(252, 252, 252, 0.6);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+}

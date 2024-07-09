@@ -1,0 +1,58 @@
+.widgetsContainer {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.miniWidgets {
+  min-width: none;
+  width: 100%;
+  max-width: 43rem;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weeklyForecastChartContainer {
+  min-width: none;
+  width: 100%;
+  max-width: 43rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.weeklyForecastContainer {
+  min-width: none;
+  width: 100%;
+  max-width: 43rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 
+@media  all and (max-width: 900px) {
+
+.weeklyForecastContainer {
+  height: fit-content;
+}
+
+
+
+} */

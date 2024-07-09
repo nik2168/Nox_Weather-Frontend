@@ -1,0 +1,54 @@
+.dashboard {
+  height: 100vh;
+  width: 60vw;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.dashboardHeader {
+  position: absolute;
+  display: flex;
+  padding-left: 1.3rem;
+  padding-right: 2rem;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ArrowBackIos:hover {
+  cursor: pointer;
+  filter: drop-shadow(0 0 6px rgba(252, 252, 252, 0.8));
+}
+
+.dashboardHeader button {
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: blue;
+  color: var(--textColor);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.4s ease-in;
+}
+
+button:hover {
+  background-color: rgb(10, 10, 122);
+}
+
+@media (max-width: 790px) {
+  .dashboard {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 60;
+      background-color: var(--bg);
+
+  }
+}
