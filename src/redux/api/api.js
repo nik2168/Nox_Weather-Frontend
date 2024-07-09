@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `https://nox-weather-backend.onrender.com`,
+    baseUrl: ``,
     // baseUrl: `https://localhost:3333`, // use this during devlopment
   }),
   tagTypes: ["Weather", "Weekly", "User"],
@@ -25,7 +25,7 @@ const api = createApi({
 
     userProfile: builder.query({
       query: () => ({
-        url: "/api/v1/user/profile",
+        url: "https://nox-weather-backend.onrender.com/api/v1/user/profile",
         credentials: "include",
       }),
       providesTags: ["User"],
@@ -33,7 +33,7 @@ const api = createApi({
 
     addRemoveCities: builder.query({
       query: (city) => ({
-        url: `/api/v1/user/updatecities/${city}`,
+        url: `https://nox-weather-backend.onrender.com/api/v1/user/updatecities/${city}`,
         credentials: "include",
       }),
       invalidatesTags: ["User"],
