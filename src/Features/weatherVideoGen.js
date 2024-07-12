@@ -36,6 +36,8 @@ export const weatherVideoSelector = (curWeather) => {
     return snowfall2;
   } else if (curWeather.toString() === "Thunder") {
     return thunder;
+  } else if (curWeather.toString() === "Haze") {
+    return mist;
   } else {
     return randomVideo;
   }
