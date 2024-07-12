@@ -40,3 +40,21 @@
   width: 100%;
   padding: 1rem;
 }
+
+
+@media  all and (max-width: 470px) {
+.weeklyForecastChartBox {
+  width: 100%;
+  height: fit-content;
+  border-radius: 25px;
+  padding: none;
+  backdrop-filter: blur(16px);
+  background-color: rgba(34, 29, 29, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  /* filter: drop-shadow(0 0 20px rgba(252, 252, 252, 0.8)); */
+}
+
+
+}
