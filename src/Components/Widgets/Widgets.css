@@ -5,9 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  gap: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .miniWidgets {
@@ -19,7 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .weeklyForecastChartContainer {
