@@ -19,7 +19,7 @@ const api = createApi({
 
     weeklyForecast: builder.query({
       query: (name) => ({
-        url: `http://api.openweathermap.org/data/2.5/forecast?appid=6cfb46eca0d4f9bd7c6518971820b06f&q=${name}&count=7`,
+        url: `https://api.openweathermap.org/data/2.5/forecast?appid=6cfb46eca0d4f9bd7c6518971820b06f&q=${name}&count=7`,
       }),
       providesTags: ["Weekly"],
     }),
