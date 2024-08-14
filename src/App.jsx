@@ -21,6 +21,7 @@ function App() {
 
   const dispatch = useDispatch();
 
+
   //axios fetching ...
   useEffect(() => {
     axios
@@ -48,7 +49,7 @@ function App() {
           <Route
             path="/login"
             element={
-              <ProtectRoute user={!user} redirect="/login">
+              <ProtectRoute user={!user} redirect="/">
                 <Login />
               </ProtectRoute>
             }

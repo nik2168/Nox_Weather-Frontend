@@ -7,6 +7,7 @@ import { usePassword, useUserName } from "../../Features/loginValidators";
 import { server } from "../../Features/config";
 import { userExists } from "../../redux/reducer/authslice";
 import { useDispatch } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -15,6 +16,7 @@ const Login = () => {
   const { user, setuser, userFlag, userErr } = useUserName("");
   const { pass, setpass, passFlag, passErr } = usePassword("");
   const [isLoading, setIsLoading] = useState(false)
+  const navigate = useNavigate()
 
 
   const dispatch = useDispatch()
@@ -51,6 +53,7 @@ const Login = () => {
       );
       dispatch(userExists(data?.user));
       toast.success(data?.message, { id: toastId });
+      console.log(data?.user)
     } catch (err) {
       console.log(err);
       toast.error(err?.response?.data?.message || "something went wrong !", {
