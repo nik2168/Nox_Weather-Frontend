@@ -35,7 +35,7 @@ const HomeCities = ({ curCity, idx }) => {
   ) : (
     <>
       <Link to={`/dashboard/${curCity}`} className="homeCityDiv">
-        <video className="videoTag" autoPlay loop muted>
+        <video className="videoTag" autoPlay loop muted playsInline>
           <source src={curWeatherVideo} type="video/mp4" />
         </video>
         <div className="firsthalfContainer">
